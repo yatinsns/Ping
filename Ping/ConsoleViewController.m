@@ -7,6 +7,7 @@
 //
 
 #import "ConsoleViewController.h"
+#import "PingController.h"
 
 #define BUTTONTEXT_START @"START"
 #define BUTTONTEXT_STOP @"STOP"
@@ -30,11 +31,12 @@
 #define CONSOLE_LOGS_PADDING_BOTTOM 20
 #define CONSOLE_LOGS_PADDING_SIDE 20
 
-@interface ConsoleViewController ()
+@interface ConsoleViewController () <PingControllerDelegate>
 
 @property (nonatomic, retain) UITextField *hostNameField;
 @property (nonatomic, retain) UITextView *consoleLogsView;
 @property (nonatomic, retain) UIButton *controlButton;
+@property (nonatomic, retain) PingController *pingController;
 
 @end
 
@@ -43,6 +45,7 @@
 @synthesize hostNameField = hostNameField_;
 @synthesize consoleLogsView = consoleLogsView_;
 @synthesize controlButton = controlButton_;
+@synthesize pingController = pingController_;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -116,11 +119,30 @@
 }
 
 - (void)startPinging {
-  NSLog(@"Start pinging");
+  self.consoleLogsView.text = @"";
+  if ((self.hostNameField.text == nil) || [self.hostNameField.text isEqual:@""]) {
+    [self appendTextToLogs:@"Error: Hostname not given"];
+  } else {
+    [self appendTextToLogs:@"Start pinging ..."];
+    self.pingController = [[[PingController alloc] init] autorelease];
+    self.pingController.delegate = self;
+    [self.pingController runWithHostName:self.hostNameField.text];
+  }
 }
 
 - (void)stopPinging {
-  NSLog(@"Stop pinging");
+  [self appendTextToLogs:@"Stop pinging ..."];
+  self.pingController.delegate = nil;
+  self.pingController = nil;
 }
+
+- (void)pingController:(PingController *)pingController addLog:(NSString *)log {
+  [self appendTextToLogs:log];
+}
+
+- (void)appendTextToLogs:(NSString *)text {
+  self.consoleLogsView.text = [NSString stringWithFormat:@"%@\n%@", self.consoleLogsView.text, text];
+}
+
 
 @end

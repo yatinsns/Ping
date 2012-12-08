@@ -17,6 +17,10 @@
 		05D040B31673228000BB97D6 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 05D040B21673228000BB97D6 /* Default@2x.png */; };
 		05D040B51673228000BB97D6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 05D040B41673228000BB97D6 /* Default-568h@2x.png */; };
 		05D040BD1673231F00BB97D6 /* ConsoleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D040BC1673231F00BB97D6 /* ConsoleViewController.m */; };
+		05D040C016732CBC00BB97D6 /* SimplePing.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D040BF16732CBC00BB97D6 /* SimplePing.m */; };
+		05D040C216732D3600BB97D6 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05D040C116732D3600BB97D6 /* CFNetwork.framework */; };
+		05D040C416732D3F00BB97D6 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05D040C316732D3F00BB97D6 /* MobileCoreServices.framework */; };
+		05D040C716732D6700BB97D6 /* PingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D040C616732D6600BB97D6 /* PingController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +39,12 @@
 		05D040B41673228000BB97D6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		05D040BB1673231F00BB97D6 /* ConsoleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsoleViewController.h; sourceTree = "<group>"; };
 		05D040BC1673231F00BB97D6 /* ConsoleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsoleViewController.m; sourceTree = "<group>"; };
+		05D040BE16732CBC00BB97D6 /* SimplePing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePing.h; sourceTree = "<group>"; };
+		05D040BF16732CBC00BB97D6 /* SimplePing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplePing.m; sourceTree = "<group>"; };
+		05D040C116732D3600BB97D6 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		05D040C316732D3F00BB97D6 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		05D040C516732D6600BB97D6 /* PingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PingController.h; sourceTree = "<group>"; };
+		05D040C616732D6600BB97D6 /* PingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PingController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +52,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05D040C416732D3F00BB97D6 /* MobileCoreServices.framework in Frameworks */,
+				05D040C216732D3600BB97D6 /* CFNetwork.framework in Frameworks */,
 				05D0409F1673228000BB97D6 /* UIKit.framework in Frameworks */,
 				05D040A11673228000BB97D6 /* Foundation.framework in Frameworks */,
 				05D040A31673228000BB97D6 /* CoreGraphics.framework in Frameworks */,
@@ -54,6 +66,8 @@
 		05D0408F1673228000BB97D6 = {
 			isa = PBXGroup;
 			children = (
+				05D040C316732D3F00BB97D6 /* MobileCoreServices.framework */,
+				05D040C116732D3600BB97D6 /* CFNetwork.framework */,
 				05D040A41673228000BB97D6 /* Ping */,
 				05D0409D1673228000BB97D6 /* Frameworks */,
 				05D0409B1673228000BB97D6 /* Products */,
@@ -85,6 +99,10 @@
 				05D040AE1673228000BB97D6 /* AppDelegate.m */,
 				05D040BB1673231F00BB97D6 /* ConsoleViewController.h */,
 				05D040BC1673231F00BB97D6 /* ConsoleViewController.m */,
+				05D040C516732D6600BB97D6 /* PingController.h */,
+				05D040C616732D6600BB97D6 /* PingController.m */,
+				05D040BE16732CBC00BB97D6 /* SimplePing.h */,
+				05D040BF16732CBC00BB97D6 /* SimplePing.m */,
 				05D040A51673228000BB97D6 /* Supporting Files */,
 			);
 			path = Ping;
@@ -172,6 +190,8 @@
 				05D040AB1673228000BB97D6 /* main.m in Sources */,
 				05D040AF1673228000BB97D6 /* AppDelegate.m in Sources */,
 				05D040BD1673231F00BB97D6 /* ConsoleViewController.m in Sources */,
+				05D040C016732CBC00BB97D6 /* SimplePing.m in Sources */,
+				05D040C716732D6700BB97D6 /* PingController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
