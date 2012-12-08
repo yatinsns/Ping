@@ -16,6 +16,7 @@
 		05D040B11673228000BB97D6 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 05D040B01673228000BB97D6 /* Default.png */; };
 		05D040B31673228000BB97D6 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 05D040B21673228000BB97D6 /* Default@2x.png */; };
 		05D040B51673228000BB97D6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 05D040B41673228000BB97D6 /* Default-568h@2x.png */; };
+		05D040BD1673231F00BB97D6 /* ConsoleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D040BC1673231F00BB97D6 /* ConsoleViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		05D040B01673228000BB97D6 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		05D040B21673228000BB97D6 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		05D040B41673228000BB97D6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		05D040BB1673231F00BB97D6 /* ConsoleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsoleViewController.h; sourceTree = "<group>"; };
+		05D040BC1673231F00BB97D6 /* ConsoleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsoleViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +83,8 @@
 			children = (
 				05D040AD1673228000BB97D6 /* AppDelegate.h */,
 				05D040AE1673228000BB97D6 /* AppDelegate.m */,
+				05D040BB1673231F00BB97D6 /* ConsoleViewController.h */,
+				05D040BC1673231F00BB97D6 /* ConsoleViewController.m */,
 				05D040A51673228000BB97D6 /* Supporting Files */,
 			);
 			path = Ping;
@@ -166,6 +171,7 @@
 			files = (
 				05D040AB1673228000BB97D6 /* main.m in Sources */,
 				05D040AF1673228000BB97D6 /* AppDelegate.m in Sources */,
+				05D040BD1673231F00BB97D6 /* ConsoleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
